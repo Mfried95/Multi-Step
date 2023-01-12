@@ -4,33 +4,65 @@ import styled from "styled-components";
 import "./index.css";
 
 function App() {
-
   const [form, setform] = useState({
-    name: '',
-    email: '',
-    number: '',
+    name: "",
+    email: "",
+    number: "",
     step: 1,
     plan: NaN,
-    addon: '',
-    summary: ''
-  })
+    addon: "",
+    summary: "",
+  });
+
+  const stepOne = () => {
+    return (
+      <>
+        <div>form</div>
+      </>
+    );
+  };
+
+  const stepTwo = () => {
+    return (
+      <>
+        <div>form</div>
+      </>
+    );
+  };
+
+  const stepThree = () => {
+    return (
+      <>
+        <div>form</div>
+      </>
+    );
+  };
+
+  const stepFour = () => {
+    return (
+      <>
+        <div>form</div>
+      </>
+    );
+  };
+
+  const renderStep = () => {
+    return <></>;
+  };
 
   return (
     <div className="App">
       <FormContainer>
         <StepSelection>
-          <div className="steps"></div>
-        </StepSelection>
-        <FormInfo>
           
-        </FormInfo>
+        </StepSelection>
+        <FormInfo>{renderStep()}</FormInfo>
       </FormContainer>
     </div>
   );
 }
 
 export default App;
-
 
 
 const StepSelection = styled.div`
@@ -40,7 +72,8 @@ const StepSelection = styled.div`
   height: 100%;
   width: 400px;
   margin: 20px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const FormContainer = styled.div`
@@ -56,4 +89,4 @@ const FormInfo = styled.div`
   width: 100%;
   height: 100%;
   background-color: green;
-`
+`;
