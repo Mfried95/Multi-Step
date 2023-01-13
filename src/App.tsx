@@ -2,6 +2,11 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import styled from "styled-components";
 import "./index.css";
+import stepone from "./components/stepone";
+import steptwo from "./components/steptwo";
+import stepthree from "./components/stepthree";
+import stepfour from "./components/stepfour";
+
 
 function App() {
   const [form, setform] = useState({
@@ -32,7 +37,7 @@ function App() {
               setPage(1);
             }}
           >
-            Next step
+            Next 
           </button>
           <h2>Step 1</h2>
         </div>
