@@ -8,16 +8,34 @@ function App() {
     name: "",
     email: "",
     number: "",
-    step: 1,
-    plan: NaN,
-    addon: "",
-    summary: "",
   });
+
+  const [page, setPage] = useState(0);
+
+  const renderpage = () => {
+    if (page === 0) {
+      return stepOne();
+    } else if (page === 1) {
+      return stepTwo();
+    } else {
+      return stepThree()
+    }
+  };
+
 
   const stepOne = () => {
     return (
       <>
-        <div>form</div>
+        <div>
+          <button
+            onClick={() => {
+              setPage(1);
+            }}
+          >
+            Next step
+          </button>
+          <h2>Step 1</h2>
+        </div>
       </>
     );
   };
@@ -25,45 +43,50 @@ function App() {
   const stepTwo = () => {
     return (
       <>
-        <div>form</div>
+        <button
+          onClick={() => {
+            setPage(2);
+          }}
+        >
+          Next step
+        </button>
+        <button
+        onClick={() => {
+          setPage(0)
+        }}
+        >back</button>
+        <h2>Step 2</h2>
       </>
     );
   };
+
 
   const stepThree = () => {
     return (
       <>
-        <div>form</div>
+      <button>Next</button>
+      <button
+      onClick={() => {
+        setPage(1)
+      }}
+      >Back</button>
+      <h2>Step 3</h2>
       </>
-    );
-  };
+    )
+  }
 
-  const stepFour = () => {
-    return (
-      <>
-        <div>form</div>
-      </>
-    );
-  };
-
-  const renderStep = () => {
-    return <></>;
-  };
 
   return (
-    <div className="App">
+    <div className="container">
       <FormContainer>
-        <StepSelection>
-          
-        </StepSelection>
-        <FormInfo>{renderStep()}</FormInfo>
+        <StepSelection></StepSelection>
+        <FormInfo>{renderpage()}</FormInfo>
       </FormContainer>
     </div>
   );
 }
 
 export default App;
-
 
 const StepSelection = styled.div`
   background-image: url("../src/assets/images/bg-sidebar-desktop.svg");
@@ -80,7 +103,7 @@ const FormContainer = styled.div`
   width: 1000px;
   height: 600px;
   border-radius: 1.5em;
-  background-color: blue;
+  background-color: white;
   display: flex;
   margin: 5% auto;
 `;
@@ -88,5 +111,5 @@ const FormContainer = styled.div`
 const FormInfo = styled.div`
   width: 100%;
   height: 100%;
-  background-color: green;
+  background-color: white;
 `;
