@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import styled from "styled-components";
 import "./index.css";
 import StepOne from "./components/stepone";
 import StepTwo from "./components/steptwo";
@@ -19,11 +17,11 @@ function App() {
 
   return (
    <div>
-    {currentStepIndex + 1} / 0
-    {steps}
-    <div>
-    {currentStepIndex !== 0 && <button type="button" onClick={back}>Back</button>}
-    <button type="button" onClick={next}>Next</button>
+    <div className="form-container">
+      <div className="form-step-container">
+        
+      </div>
+      {steps}
     </div>
    </div>
    

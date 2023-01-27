@@ -2,6 +2,17 @@ body{
     background-color: hsl(229, 24%, 87%);
 }
 
+.form-container{
+    background-color: white;
+    height: 525px;
+    width: 950px;
+    display: flex;
+    margin: 150px auto;
+}
 
-
+.form-step-container{
+    height: 100%;
+    width: 250px;
+    background-color: aqua;
+}
 
