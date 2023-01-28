@@ -26,7 +26,12 @@ function App() {
         <div className="count-container">
           <div className="form-step-count">
             <div className="form-count">
-              <div className="circle">
+              <div
+                className="circle"
+                style={{
+                  backgroundColor: currentStepIndex == 0 ? "hsl(228, 100%, 84%)" : "none",
+                }}
+              >
                 <div className="number">1</div>
               </div>
               <div className="count container">
@@ -36,32 +41,47 @@ function App() {
             </div>
 
             <div className="form-count">
-              <div className="circle">
+              <div
+                className="circle"
+                style={{
+                  backgroundColor: currentStepIndex == 1 ? "hsl(228, 100%, 84%)" : "none",
+                }}
+              >
                 <div className="number">2</div>
               </div>
               <div className="count container">
                 <h2>Step 2</h2>
-                <p>YOUR INFO</p>
+                <p>Select Plan</p>
               </div>
             </div>
 
             <div className="form-count">
-              <div className="circle">
+              <div
+                className="circle"
+                style={{
+                  backgroundColor: currentStepIndex == 2 ? "hsl(228, 100%, 84%)" : "none",
+                }}
+              >
                 <div className="number">3</div>
               </div>
               <div className="count container">
                 <h2>Step 3</h2>
-                <p>YOUR INFO</p>
+                <p>Add-ons</p>
               </div>
             </div>
 
             <div className="form-count">
-              <div className="circle">
+              <div
+                className="circle"
+                style={{
+                  backgroundColor: currentStepIndex === 3 ? "hsl(228, 100%, 84%)" : "none",
+                }}
+              >
                 <div className="number">4</div>
               </div>
               <div className="count container">
                 <h2>Step 4</h2>
-                <p>YOUR INFO</p>
+                <p>Summary</p>
               </div>
             </div>
           </div>
