@@ -1,0 +1,16 @@
+.container p {
+    color: black;
+    text-transform: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container h1{
+    margin: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
