@@ -1,6 +1,16 @@
 import React from 'react'
 
 const steptwo = () => {
+
+  type planData = {
+    plan: string
+  };
+  
+  type PlanFormProps = planData & {
+    updateFields: (fields: Partial<planData>) => void;
+  };
+  
+
   return (
     <div>
       <div className="personal-info-container">
