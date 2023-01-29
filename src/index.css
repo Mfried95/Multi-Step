@@ -60,13 +60,41 @@ span{
 
 .button-container{
     display: flex;
-    float: right;
-    gap: 3em;
+    justify-content: space-between;
+    margin-top: 2em;
+    padding: 0em 6.6em;
+}
+
+button{
+    height: 40px;
+    width: 80px;
+    border: none;
+    cursor: pointer;
+}
+
+.next-btn{
+    background-color: hsl(246, 96%, 28%);
+    color: white;
+}
+
+.next-btn:hover{
+    background-color: hsl(228, 100%, 84%);
+    color: black;
+    font-weight: 700;
+}
+
+.back-btn{
+    background-color: white;
+}
+
+.back-btn:hover{
+    background-color: hsl(228, 100%, 84%);
 }
 
 
-button{
-    padding: 1.5em 1.5em;
+.step{
+    background-color: aqua;
+    width: 100%;
 }
 
 /* Typeography */
@@ -93,6 +121,7 @@ p{
 }
 
 .number{
+    font-weight: 700;
     text-align: center;
     color: white;
     font-size: 15px;

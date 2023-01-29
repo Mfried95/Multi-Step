@@ -29,7 +29,9 @@ function App() {
                     currentStepIndex === 0 ? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
-                <div className="number">1</div>
+                <div className="number" style={{
+                  color:  currentStepIndex === 0 ? "black" : "white",
+                }}>1</div>
               </div>
               <div className="count-container">
                 <h2>Step 1</h2>
@@ -45,7 +47,9 @@ function App() {
                     currentStepIndex === 1 !? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
-                <div className="number">2</div>
+                <div className="number" style={{
+                  color:  currentStepIndex === 1 ? "black" : "white",
+                }}>2</div>
               </div>
               <div className="count-container">
                 <h2>Step 2</h2>
@@ -61,7 +65,9 @@ function App() {
                     currentStepIndex === 2 ? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
-                <div className="number">3</div>
+                <div className="number" style={{
+                  color:  currentStepIndex === 2 ? "black" : "white",
+                }}>3</div>
               </div>
               <div className="count-container">
                 <h2>Step 3</h2>
@@ -74,7 +80,7 @@ function App() {
                 className="circle"
                 style={{
                   backgroundColor:
-                    currentStepIndex >= 3 ? "hsl(228, 100%, 84%)" : "none",
+                    currentStepIndex === 3 ? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
                 <div className="number" style={{
@@ -91,8 +97,8 @@ function App() {
         <div className="step-container">
           {steps}
           <div className="button-container">
-            <button onClick={back}>Back</button>
-            <button onClick={next}>Next</button>
+            <button onClick={back} className="back-btn">Go Back</button>
+            <button onClick={next} className="next-btn">Next</button>
           </div>
         </div>
       </div>

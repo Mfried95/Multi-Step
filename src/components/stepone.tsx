@@ -18,7 +18,8 @@ const stepone = () => {
           <p>Please provide your name, email address, and phone number.</p>
         </div>
 
-        <form action="onSubmit">
+    <div className="step">
+      <form action="onSubmit">
           <label htmlFor="Name">Name</label>
           <input type="text" />
           <label htmlFor="Email">Email Address</label>
@@ -26,7 +27,8 @@ const stepone = () => {
           <label htmlFor="Phone Number">Phone Number</label>
           <input type="tel" name="Number" id="" />
         </form>
-
+      </div>
+        
       </div>
     </div>
   );
