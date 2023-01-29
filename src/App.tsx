@@ -14,6 +14,8 @@ function App() {
     <StepFour />,
   ]);
 
+  console.log(currentStepIndex)
+
   return (
     <div>
       <div className="form-container">
@@ -24,7 +26,7 @@ function App() {
                 className="circle"
                 style={{
                   backgroundColor:
-                    currentStepIndex == 0 ? "hsl(228, 100%, 84%)" : "none",
+                    currentStepIndex === 0 ? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
                 <div className="number">1</div>
@@ -40,7 +42,7 @@ function App() {
                 className="circle"
                 style={{
                   backgroundColor:
-                    currentStepIndex == 1 ? "hsl(228, 100%, 84%)" : "none",
+                    currentStepIndex === 1 !? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
                 <div className="number">2</div>
@@ -56,7 +58,7 @@ function App() {
                 className="circle"
                 style={{
                   backgroundColor:
-                    currentStepIndex == 2 ? "hsl(228, 100%, 84%)" : "none",
+                    currentStepIndex === 2 ? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
                 <div className="number">3</div>
@@ -72,10 +74,12 @@ function App() {
                 className="circle"
                 style={{
                   backgroundColor:
-                    currentStepIndex === 3 ? "hsl(228, 100%, 84%)" : "none",
+                    currentStepIndex >= 3 ? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
-                <div className="number">4</div>
+                <div className="number" style={{
+                  color:  currentStepIndex === 3 ? "black" : "white",
+                }}>4</div>
               </div>
               <div className="count-container">
                 <h2>Step 4</h2>
@@ -84,7 +88,13 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="step-container">{steps}</div>
+        <div className="step-container">
+          {steps}
+          <div className="button-container">
+            <button onClick={back}>Back</button>
+            <button onClick={next}>Next</button>
+          </div>
+        </div>
       </div>
     </div>
   );
