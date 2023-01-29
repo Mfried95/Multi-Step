@@ -97,8 +97,8 @@ function App() {
         <div className="step-container">
           {steps}
           <div className="button-container">
-            <button onClick={back} className="back-btn">Go Back</button>
-            <button onClick={next} className="next-btn">Next</button>
+            {currentStepIndex !== 0 && <button onClick={back} className="back-btn">Go Back</button> }
+            {currentStepIndex !== 3 &&<button onClick={next} className="next-btn">Next</button>}
           </div>
         </div>
       </div>

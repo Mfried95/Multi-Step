@@ -21,7 +21,7 @@ const stepone = () => {
     <div className="step">
       <form action="onSubmit">
           <label htmlFor="Name">Name</label>
-          <input type="text" />
+          <input type="text" required />
           <label htmlFor="Email">Email Address</label>
           <input type="email" name="" id="" />
           <label htmlFor="Phone Number">Phone Number</label>
