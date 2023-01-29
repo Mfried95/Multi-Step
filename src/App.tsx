@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import "./index.css";
 import StepOne from "./components/stepone";
 import StepTwo from "./components/steptwo";
@@ -14,7 +14,13 @@ function App() {
     <StepFour />,
   ]);
 
-  console.log(currentStepIndex)
+  console.log(currentStepIndex);
+
+function onSubmit(e: FormEvent){
+  e.preventDefault()
+  next()
+}
+
 
   return (
     <div>
@@ -29,9 +35,14 @@ function App() {
                     currentStepIndex === 0 ? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
-                <div className="number" style={{
-                  color:  currentStepIndex === 0 ? "black" : "white",
-                }}>1</div>
+                <div
+                  className="number"
+                  style={{
+                    color: currentStepIndex === 0 ? "black" : "white",
+                  }}
+                >
+                  1
+                </div>
               </div>
               <div className="count-container">
                 <h2>Step 1</h2>
@@ -44,12 +55,17 @@ function App() {
                 className="circle"
                 style={{
                   backgroundColor:
-                    currentStepIndex === 1 !? "hsl(228, 100%, 84%)" : "none",
+                    currentStepIndex === 1! ? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
-                <div className="number" style={{
-                  color:  currentStepIndex === 1 ? "black" : "white",
-                }}>2</div>
+                <div
+                  className="number"
+                  style={{
+                    color: currentStepIndex === 1 ? "black" : "white",
+                  }}
+                >
+                  2
+                </div>
               </div>
               <div className="count-container">
                 <h2>Step 2</h2>
@@ -65,9 +81,14 @@ function App() {
                     currentStepIndex === 2 ? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
-                <div className="number" style={{
-                  color:  currentStepIndex === 2 ? "black" : "white",
-                }}>3</div>
+                <div
+                  className="number"
+                  style={{
+                    color: currentStepIndex === 2 ? "black" : "white",
+                  }}
+                >
+                  3
+                </div>
               </div>
               <div className="count-container">
                 <h2>Step 3</h2>
@@ -83,9 +104,14 @@ function App() {
                     currentStepIndex === 3 ? "hsl(228, 100%, 84%)" : "none",
                 }}
               >
-                <div className="number" style={{
-                  color:  currentStepIndex === 3 ? "black" : "white",
-                }}>4</div>
+                <div
+                  className="number"
+                  style={{
+                    color: currentStepIndex === 3 ? "black" : "white",
+                  }}
+                >
+                  4
+                </div>
               </div>
               <div className="count-container">
                 <h2>Step 4</h2>
@@ -94,13 +120,21 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="step-container">
+        <form onSubmit={onSubmit} className="step-container">
           {steps}
           <div className="button-container">
-            {currentStepIndex !== 0 && <button onClick={back} className="back-btn">Go Back</button> }
-            {currentStepIndex !== 3 &&<button onClick={next} className="next-btn">Next</button>}
+            {currentStepIndex !== 0 && (
+              <button type="button" onClick={back} className="back-btn">
+                Go Back
+              </button>
+            )}
+            {currentStepIndex !== 3 && (
+              <button type="submit" onSubmit={onSubmit} className="next-btn">
+                Next
+              </button>
+            )}
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

@@ -19,14 +19,14 @@ const stepone = () => {
         </div>
 
     <div className="step">
-      <form action="onSubmit">
+      <div className="form-wrapper">
           <label htmlFor="Name">Name</label>
           <input type="text" required />
           <label htmlFor="Email">Email Address</label>
           <input type="email" name="" id="" />
           <label htmlFor="Phone Number">Phone Number</label>
           <input type="tel" name="Number" id="" />
-        </form>
+        </div>
       </div>
         
       </div>
