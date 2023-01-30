@@ -25,6 +25,7 @@ const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
             <label htmlFor="Name">Name</label>
             <input
               type="text"
+              required
               onChange={(e) =>
                 updateFields({
                   name: e.target.value,
@@ -35,6 +36,7 @@ const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
             <input
               type="email"
               name=""
+              required
               id=""
               value={email}
               onChange={(e) =>
@@ -47,6 +49,7 @@ const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
             <input
               type="tel"
               name="Number"
+              required
               id=""
               value={phone}
               onChange={(e) =>
