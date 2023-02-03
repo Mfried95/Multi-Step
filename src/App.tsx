@@ -11,6 +11,7 @@ type FormData = {
   email: string,
   phone: string,
   plan: string,
+  price: number,
   addons: number,
   total: number,
 };
@@ -21,6 +22,7 @@ const INITAL_DATA: FormData = {
   email: "",
   phone: "",
   plan: "",
+  price: 0,
   addons: 0,
   total: 0,
 };
@@ -36,12 +38,11 @@ function App() {
 
   const { steps, currentStepIndex, next, back } = useMultistepForm([
     <StepOne {...data} updateFields={updateFields} />,
-    <StepTwo {...data}  />,
+    <StepTwo {...data} updateFields={updateFields} />,
     <StepThree {...data}  />,
     <StepFour {...data}  />,
   ]);
 
-  console.log(currentStepIndex);
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
