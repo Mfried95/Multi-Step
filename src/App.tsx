@@ -39,8 +39,8 @@ function App() {
   const { steps, currentStepIndex, next, back } = useMultistepForm([
     <StepOne {...data} updateFields={updateFields} />,
     <StepTwo {...data} updateFields={updateFields} />,
-    <StepThree {...data}  />,
-    <StepFour {...data}  />,
+    <StepThree {...data} updateFields={updateFields}  />,
+    <StepFour {...data} updateFields={updateFields} />,
   ]);
 
 
