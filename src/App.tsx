@@ -60,7 +60,7 @@ function App() {
                 className="circle"
                 style={{
                   backgroundColor:
-                    currentStepIndex === 0 ? "hsl(228, 100%, 84%)" : "none",
+                    currentStepIndex === 0 ? "hsl(228, 100%, 84%)" : "",
                 }}
               >
                 <div
@@ -83,7 +83,7 @@ function App() {
                 className="circle"
                 style={{
                   backgroundColor:
-                    currentStepIndex === 1! ? "hsl(228, 100%, 84%)" : "none",
+                    currentStepIndex === 1! ? "hsl(228, 100%, 84%)" : "",
                 }}
               >
                 <div
@@ -106,7 +106,7 @@ function App() {
                 className="circle"
                 style={{
                   backgroundColor:
-                    currentStepIndex === 2 ? "hsl(228, 100%, 84%)" : "none",
+                    currentStepIndex === 2 ? "hsl(228, 100%, 84%)" : "",
                 }}
               >
                 <div
@@ -129,7 +129,7 @@ function App() {
                 className="circle"
                 style={{
                   backgroundColor:
-                    currentStepIndex === 3 ? "hsl(228, 100%, 84%)" : "none",
+                    currentStepIndex === 3 ? "hsl(228, 100%, 84%)" : "",
                 }}
               >
                 <div
