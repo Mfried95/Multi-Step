@@ -11,6 +11,10 @@ type PlanDataFormProps = PlanData & {
 };
 
 const steptwo = ({ plan, price, updateFields }: PlanDataFormProps) => {
+
+
+
+  
   return (
     <div>
       <div className="personal-info-container">
@@ -19,7 +23,8 @@ const steptwo = ({ plan, price, updateFields }: PlanDataFormProps) => {
           <p>You have the option of Monthly or Yearly billing.</p>
         </div>
         <div className="plan-selection">
-          <section onClick={() => updateFields({ plan: "Arcade", price: +2 })}>
+          <section 
+          onClick={() => updateFields({ plan: "Arcade", price: +2 })}>
             <h2>Arcade</h2>
           </section>
           <section

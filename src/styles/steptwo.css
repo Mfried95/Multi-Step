@@ -23,9 +23,18 @@
 
 
 section{
-    background-color: black;
+    border: solid 1px rgb(204, 202, 202);
     height: 150px;
     width: 150px;
     margin: auto;
     cursor: pointer;
+}
+
+section:focus {
+    border: solid 1px black;
+  }
+
+
+button{
+    background-color: black;
 }
