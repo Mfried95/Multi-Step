@@ -14,27 +14,41 @@
 
 .plan-selection{
     height: 300px;
-    width: 100%;
     display: flex;
     flex-direction: row;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 
-section{
+.plan-btn{
     border: solid 1px rgb(204, 202, 202);
-    height: 150px;
-    width: 150px;
     margin: auto;
     cursor: pointer;
+    height: 150px;
+    width: 150px;
+    background-color: white;
 }
 
-section:focus {
-    border: solid 1px black;
-  }
+.plan-btn:hover{
+    border: solid black 2px;
+}
+
+.plan-btn:focus{
+    border: solid black 2px;
+}
+
+.plan-btn{
+    color: black;
+}
 
 
-button{
-    background-color: black;
+span{
+    justify-content: center;
+    padding: 15px;
+}
+
+img{
+    padding: 1em;
+    justify-content: none;
 }
