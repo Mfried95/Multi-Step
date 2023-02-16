@@ -1,16 +1,16 @@
-import React from "react";
 import "../styles/stepthree.css";
 
 type AddonsData = {
-  addons: number
+  online: number;
+  storage: number;
+  custom: number;
 };
 
 type AddonsDataFormProps = AddonsData & {
   updateFields: (fields: Partial<AddonsData>) => void;
 };
 
-
-const stepthree = ({addons, updateFields}: AddonsDataFormProps ) => {
+const stepthree = ({ updateFields }: AddonsDataFormProps) => {
   return (
     <div>
       <div className="personal-info-container">
@@ -20,18 +20,35 @@ const stepthree = ({addons, updateFields}: AddonsDataFormProps ) => {
         </div>
         <div className="addons">
           <div className="choice">
-            <input type="checkbox" onChange={() => updateFields({
-              addons: +2
-            })} />
+            <input
+              type="checkbox"
+              onChange={() =>
+                updateFields({
+                  online: 1,
+                })
+              }
+            />
             <label htmlFor="checkbox">Online serivce</label>
           </div>
           <div className="choice">
-            <input type="checkbox" onChange={() => updateFields({
-              addons: +3
-            })} />
+            <input
+              type="checkbox"
+              onChange={() =>
+                updateFields({
+                  storage: 2,
+                })
+              }
+            />
           </div>
           <div className="choice">
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              onChange={() =>
+                updateFields({
+                  custom: 1,
+                })
+              }
+            />
           </div>
         </div>
       </div>

@@ -7,15 +7,16 @@ import StepFour from "./components/stepfour";
 import { useMultistepForm } from "./hooks/useMultistepForm";
 
 type FormData = {
-  name: string,
-  email: string,
-  phone: string,
-  plan: string,
-  price: number,
-  addons: number,
-  total: number,
+  name: string;
+  email: string;
+  phone: string;
+  plan: string;
+  price: number;
+  total: number;
+  online: number;
+  custom: number;
+  storage: number;
 };
-
 
 const INITAL_DATA: FormData = {
   name: "",
@@ -23,31 +24,32 @@ const INITAL_DATA: FormData = {
   phone: "",
   plan: "",
   price: 0,
-  addons: 0,
+  online: 0,
+  storage: 0,
+  custom: 0,
   total: 0,
 };
 
 function App() {
   const [data, setData] = useState(INITAL_DATA);
 
-  function updateFields(fields: Partial <FormData> ){
-    setData(prev => {
-      return {...prev, ...fields}
-    })
+  function updateFields(fields: Partial<FormData>) {
+    setData((prev) => {
+      return { ...prev, ...fields };
+    });
   }
 
   const { steps, currentStepIndex, next, back } = useMultistepForm([
     <StepOne {...data} updateFields={updateFields} />,
     <StepTwo {...data} updateFields={updateFields} />,
-    <StepThree {...data} updateFields={updateFields}  />,
+    <StepThree {...data} updateFields={updateFields} />,
     <StepFour {...data} updateFields={updateFields} />,
   ]);
-
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     next();
-    console.log(data)
+    console.log(data);
   }
 
   return (
@@ -160,7 +162,6 @@ function App() {
               <button type="submit" onSubmit={onSubmit} className="next-btn">
                 Next
               </button>
-              
             )}
           </div>
         </form>
@@ -168,6 +169,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
