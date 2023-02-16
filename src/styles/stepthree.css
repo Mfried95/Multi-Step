@@ -8,7 +8,12 @@
 
 .choice{
     height: 80px;
+    width: 90%;
     border: solid 1px blue;
     cursor: pointer;
+    background-color: white;
 }
 
+.online:active, .online:hover{
+    border: solid black 2px;
+}
