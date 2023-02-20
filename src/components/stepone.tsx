@@ -32,6 +32,7 @@ const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
                   name: e.target.value,
                 })
               }
+              
             />
             <label htmlFor="Email">Email Address:</label>
             <input

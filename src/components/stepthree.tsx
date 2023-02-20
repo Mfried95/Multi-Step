@@ -11,7 +11,7 @@ type AddonsDataFormProps = AddonsData & {
   updateFields: (fields: Partial<AddonsData>) => void;
 };
 
-const stepthree = ({ updateFields }: AddonsDataFormProps) => {
+const StepThree = ({ updateFields }: AddonsDataFormProps) => {
   const [online, setOnline] = useState(false);
   const [storage, setStorage] = useState(false);
   const [custom, setCustom] = useState(false);
@@ -27,15 +27,12 @@ const stepthree = ({ updateFields }: AddonsDataFormProps) => {
         <div className="addons">
           <div
             style={{
-              border: !online ? "solid blue 1px" : "solid black 2px",
+              border: online ? "solid black 2px" : "solid blue 1px",
             }}
             className="choice online"
-            onClick={(e) => {
-              {
-                setOnline(true || false);
-              }
-              e.preventDefault();
-              updateFields({ online: 10 });
+            onClick={() => {
+              setOnline(!online);
+              updateFields({ online: online ? 0 : 1 });
             }}
           >
             <div className="addon-content">
@@ -45,21 +42,18 @@ const stepthree = ({ updateFields }: AddonsDataFormProps) => {
               </div>
 
               <div>
-                <span>+$10/yr</span>
+                <span>+$1/mo</span>
               </div>
             </div>
           </div>
           <div
             className="choice storage"
-            onClick={(e) => {
-              {
-                setStorage(true);
-              }
-              e.preventDefault();
-              updateFields({ storage: 20 });
+            onClick={() => {
+              setStorage(!storage);
+              updateFields({ storage: storage ? 0 : 2 });
             }}
             style={{
-              border: !storage ? "solid blue 1px" : "solid black 2px",
+              border: storage ? "solid black 2px" : "solid blue 1px",
             }}
           >
             <div className="addon-content">
@@ -69,21 +63,19 @@ const stepthree = ({ updateFields }: AddonsDataFormProps) => {
               </div>
 
               <div>
-                <span>+$20/yr</span>
+                <span>+$2/mo</span>
               </div>
             </div>
           </div>
           <div
             className="choice custom"
-            onClick={(e) => {
-              {
-                setCustom(true);
-              }
-              e.preventDefault();
-              updateFields({ custom: 20 });
+            onClick={() => {
+
+              setCustom(!custom);
+              updateFields({ custom: custom ? 0 : 2 });
             }}
             style={{
-              border: !custom ? "solid blue 1px" : "solid black 2px",
+              border: custom ? "solid black 2px" : "solid blue 1px",
             }}
           >
             <div className="addon-content">
@@ -93,7 +85,7 @@ const stepthree = ({ updateFields }: AddonsDataFormProps) => {
               </div>
 
               <div>
-                <span>+$20/yr</span>
+                <span>+$2/mo </span>
               </div>
             </div>
           </div>
@@ -103,4 +95,4 @@ const stepthree = ({ updateFields }: AddonsDataFormProps) => {
   );
 };
 
-export default stepthree;
+export default StepThree;

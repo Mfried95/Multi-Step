@@ -107,7 +107,7 @@ button{
     color: hsl(231, 11%, 63%);
 }
 
-p{
+.count-container p{
     color: hsl(231, 100%, 99%);
     font-size: 15px;
     font-weight: 200;
