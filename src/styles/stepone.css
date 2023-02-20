@@ -12,13 +12,13 @@
 }
 
 .title {
-    text-transform: none;
+    margin-top: 20px;
     padding: 0;
     margin-bottom: 3em;
 }
 
 .title p {
-    color: black;
+    color: grey;
 }
 
 
@@ -28,11 +28,14 @@
     width: 500px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
-    gap: 0.5em;
+    gap: 16px;
 }
 
 input {
-    padding: 1em;
+    margin: 0;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 200;
     border-radius: 0.5em;
     border: solid 1px hsl(231, 11%, 63%);
     background-color: none;
@@ -42,3 +45,4 @@ input :focus {
     border: none;
     outline: none;
 }
+

@@ -17,3 +17,15 @@
 .online:active, .online:hover{
     border: solid black 2px;
 }
+
+
+.addons p{
+    color: black;
+}
+
+
+.addon-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}

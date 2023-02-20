@@ -13,6 +13,7 @@ body{
     margin: 150px auto;
     padding: 1em;
     display: flex;
+    border-radius: 20px;
 }
 
 .count-container{
@@ -67,9 +68,10 @@ span{
 
 button{
     height: 40px;
-    width: 80px;
+    width: 120px;
     border: none;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .next-btn{
@@ -93,7 +95,6 @@ button{
 
 
 .step{
-    background-color: aqua;
     width: 100%;
 }
 

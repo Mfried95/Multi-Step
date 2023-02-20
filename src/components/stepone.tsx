@@ -22,20 +22,22 @@ const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
 
         <div className="step">
           <div className="form-wrapper">
-            <label htmlFor="Name">Name</label>
+            <label htmlFor="Name">Name:</label>
             <input
               type="text"
               required
+              autoComplete="none"
               onChange={(e) =>
                 updateFields({
                   name: e.target.value,
                 })
               }
             />
-            <label htmlFor="Email">Email Address</label>
+            <label htmlFor="Email">Email Address:</label>
             <input
               type="email"
               name=""
+              autoComplete="none"
               required
               id=""
               value={email}
@@ -45,11 +47,12 @@ const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
                 })
               }
             />
-            <label htmlFor="Phone Number">Phone Number</label>
+            <label htmlFor="Phone Number">Phone Number:</label>
             <input
               type="tel"
               name="Number"
               required
+              autoComplete="none"
               id=""
               value={phone}
               onChange={(e) =>

@@ -39,6 +39,8 @@ function App() {
     });
   }
 
+  const FinalData = console.log(data)
+
   const { steps, currentStepIndex, next, back } = useMultistepForm([
     <StepOne {...data} updateFields={updateFields} />,
     <StepTwo {...data} updateFields={updateFields} />,
@@ -49,8 +51,10 @@ function App() {
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     next();
-    console.log(data);
+    FinalData
   }
+
+  
 
   return (
     <div>
