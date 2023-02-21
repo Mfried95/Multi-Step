@@ -8,7 +8,7 @@ function completed() {
         <div className="complete-container">
             <img src={Complete} alt="" />
             <h2>Thank you!</h2>
-            <p>Thanks for conirfming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+            <p>Thanks for conirfming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us support@loregaming.com</p>
         </div>
     </div>
   )

@@ -32,16 +32,20 @@ const INITAL_DATA: FormData = {
 };
 
 function App() {
+  // Initialize state to hold form data
   const [data, setData] = useState(INITAL_DATA);
 
+  // Update form data fields
   function updateFields(fields: Partial<FormData>) {
     setData((prev) => {
       return { ...prev, ...fields };
     });
   }
 
+  // Log the final form data to the console
   const FinalData = console.log(data);
 
+  // Use a custom hook to implement the multistep form functionality and pass / update data to each component
   const { steps, currentStepIndex, next, back } = useMultistepForm([
     <StepOne {...data} updateFields={updateFields} />,
     <StepTwo {...data} updateFields={updateFields} />,
@@ -50,6 +54,7 @@ function App() {
     <Completed />,
   ]);
 
+  // Handle form submission
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     next();

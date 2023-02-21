@@ -1,18 +1,22 @@
-import React, { useState } from "react";
-import "../styles/stepone.css";
+import React, { useState } from "react"; // import React and useState hook from react package
+import "../styles/stepone.css"; // import css file for component styling
 
 type UserData = {
+  // define type for user data
   name: string;
   email: string;
   phone: string;
 };
 
 type UserFormProps = UserData & {
+  // define type for props that include user data and a function to update fields
   updateFields: (fields: Partial<UserData>) => void;
 };
 
 const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
+  // define functional component called "stepone" that accepts UserFormProps as props
   return (
+    // component markup
     <div>
       <div className="personal-info-container">
         <div className="title">
@@ -27,12 +31,13 @@ const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
               type="text"
               required
               autoComplete="none"
-              onChange={(e) =>
+              onChange={(
+                e // update the name field with user input on change
+              ) =>
                 updateFields({
                   name: e.target.value,
                 })
               }
-              
             />
             <label htmlFor="Email">Email Address:</label>
             <input
@@ -41,8 +46,10 @@ const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
               autoComplete="none"
               required
               id=""
-              value={email}
-              onChange={(e) =>
+              value={email} // set the email field to its initial value from props
+              onChange={(
+                e // update the email field with user input on change
+              ) =>
                 updateFields({
                   email: e.target.value,
                 })
@@ -55,8 +62,10 @@ const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
               required
               autoComplete="none"
               id=""
-              value={phone}
-              onChange={(e) =>
+              value={phone} // set the phone field to its initial value from props
+              onChange={(
+                e // update the phone field with user input on change
+              ) =>
                 updateFields({
                   phone: e.target.value,
                 })
@@ -69,4 +78,4 @@ const stepone = ({ name, email, phone, updateFields }: UserFormProps) => {
   );
 };
 
-export default stepone;
+export default stepone; // export the component for use in other parts of the application

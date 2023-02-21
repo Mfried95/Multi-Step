@@ -4,15 +4,18 @@ import Arcade from "../assets/images/icon-arcade.svg";
 import Advanced from "../assets/images/icon-advanced.svg";
 import Pro from "../assets/images/icon-pro.svg";
 
+// Define the type of the data that the form will collect
 type PlanData = {
   plan: string;
   price: number;
 };
 
+// Define the type of the props that will be passed to this component, which include the collected data and an updateFields function
 type PlanDataFormProps = PlanData & {
   updateFields: (fields: Partial<PlanData>) => void;
 };
 
+// Define the component using destructuring of the props
 const steptwo = ({ plan, price, updateFields }: PlanDataFormProps) => {
   return (
     <div>
@@ -23,6 +26,8 @@ const steptwo = ({ plan, price, updateFields }: PlanDataFormProps) => {
         </div>
 
         <div className="plan-selection">
+          // Button to select Arcade plan, which calls the updateFields function
+          with the new data when clicked
           <button
             type="button"
             className="plan-btn"
@@ -32,6 +37,8 @@ const steptwo = ({ plan, price, updateFields }: PlanDataFormProps) => {
             <h2>Arcade</h2>
             <span>$2 / monthly</span>
           </button>
+          // Button to select Advanced plan, which calls the updateFields
+          function with the new data when clicked
           <button
             type="button"
             className="plan-btn"
@@ -41,6 +48,8 @@ const steptwo = ({ plan, price, updateFields }: PlanDataFormProps) => {
             <h2>Advanced</h2>
             <span>$4 / monthly</span>
           </button>
+          // Button to select Pro plan, which calls the updateFields function
+          with the new data when clicked
           <button
             type="button"
             className="plan-btn"

@@ -1,6 +1,8 @@
+// Importing the `useState` hook from the React library and the stylesheet for this component
 import { useState } from "react";
 import "../styles/stepthree.css";
 
+// Defining a type for the add-ons data and a type for the props that this component receives
 type AddonsData = {
   online: number;
   storage: number;
@@ -11,11 +13,14 @@ type AddonsDataFormProps = AddonsData & {
   updateFields: (fields: Partial<AddonsData>) => void;
 };
 
+// Defining the StepThree component that receives props of type `AddonsDataFormProps`
 const StepThree = ({ updateFields }: AddonsDataFormProps) => {
+  // Initializing state variables for each add-on, initially set to `false`
   const [online, setOnline] = useState(false);
   const [storage, setStorage] = useState(false);
   const [custom, setCustom] = useState(false);
 
+  // Rendering the component
   return (
     <div>
       <div className="personal-info-container">
@@ -25,12 +30,14 @@ const StepThree = ({ updateFields }: AddonsDataFormProps) => {
         </div>
 
         <div className="addons">
+          {/* Render the online add-on */}
           <div
             style={{
               border: online ? "solid black 2px" : "solid blue 1px",
             }}
             className="choice online"
             onClick={() => {
+              // Toggle the online add-on state and update the fields passed in as props
               setOnline(!online);
               updateFields({ online: online ? 0 : 1 });
             }}
@@ -46,9 +53,12 @@ const StepThree = ({ updateFields }: AddonsDataFormProps) => {
               </div>
             </div>
           </div>
+
+          {/* Render the storage add-on */}
           <div
             className="choice storage"
             onClick={() => {
+              // Toggle the storage add-on state and update the fields passed in as props
               setStorage(!storage);
               updateFields({ storage: storage ? 0 : 2 });
             }}
@@ -67,9 +77,12 @@ const StepThree = ({ updateFields }: AddonsDataFormProps) => {
               </div>
             </div>
           </div>
+
+          {/* Render the custom add-on */}
           <div
             className="choice custom"
             onClick={() => {
+              // Toggle the custom add-on state and update the fields passed in as props
               setCustom(!custom);
               updateFields({ custom: custom ? 0 : 2 });
             }}
@@ -95,3 +108,4 @@ const StepThree = ({ updateFields }: AddonsDataFormProps) => {
 };
 
 export default StepThree;
+// Exporting the `StepThree` component as the default export
