@@ -26,8 +26,6 @@ const steptwo = ({ plan, price, updateFields }: PlanDataFormProps) => {
         </div>
 
         <div className="plan-selection">
-          // Button to select Arcade plan, which calls the updateFields function
-          with the new data when clicked
           <button
             type="button"
             className="plan-btn"
@@ -37,8 +35,6 @@ const steptwo = ({ plan, price, updateFields }: PlanDataFormProps) => {
             <h2>Arcade</h2>
             <span>$2 / monthly</span>
           </button>
-          // Button to select Advanced plan, which calls the updateFields
-          function with the new data when clicked
           <button
             type="button"
             className="plan-btn"
@@ -48,8 +44,7 @@ const steptwo = ({ plan, price, updateFields }: PlanDataFormProps) => {
             <h2>Advanced</h2>
             <span>$4 / monthly</span>
           </button>
-          // Button to select Pro plan, which calls the updateFields function
-          with the new data when clicked
+
           <button
             type="button"
             className="plan-btn"
