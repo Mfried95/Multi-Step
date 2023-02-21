@@ -48,7 +48,7 @@ const stepfour = ( FinalData: any, {updateFields}: SummaryDataFormProps, ) => {
        </div>
        <div className="item-content total">
         <h2>Total (monthly)</h2>
-        <p>$+{Total}/mo</p>
+        <p>+${Total}/mo</p>
        </div>
       </div>
     </div>

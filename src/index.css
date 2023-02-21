@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
-body{
+body {
     background-color: hsl(229, 24%, 87%);
     font-family: 'Ubuntu', sans-serif;
 }
 
-.form-container{
+.form-container {
     background-color: white;
     height: 525px;
     width: 950px;
@@ -16,7 +16,7 @@ body{
     border-radius: 20px;
 }
 
-.count-container{
+.count-container {
     height: 100%;
     width: 300px;
     background-image: url(./assets/images/bg-sidebar-desktop.svg);
@@ -25,48 +25,49 @@ body{
 }
 
 
-.form-count{
+.form-count {
     display: flex;
     gap: 1em;
     margin-top: 1em;
 }
 
-span{
+span {
     display: flex;
     align-items: center;
     margin: 0em 1em;
 }
 
-.count-container h2, p{
+.count-container h2,
+p {
     margin: 3px;
     padding: 0;
     display: flex;
 }
 
-.count-container{
+.count-container {
     width: 250px;
 }
 
-.form-step-count{
+.form-step-count {
     display: flex;
     flex-direction: column;
     margin: 1em;
     gap: 1em;
 }
 
-.step-container{
+.step-container {
     height: 100%;
     width: 100%;
 }
 
-.button-container{
+.button-container {
     display: flex;
     justify-content: space-between;
     margin-top: 2em;
     padding: 0em 6.6em;
 }
 
-button{
+button {
     height: 40px;
     width: 120px;
     border: none;
@@ -74,56 +75,78 @@ button{
     border-radius: 20px;
 }
 
-.next-btn{
+.next-btn {
     background-color: hsl(246, 96%, 28%);
     color: white;
 }
 
-.next-btn:hover{
+.next-btn:hover {
     background-color: hsl(228, 100%, 84%);
     color: black;
     font-weight: 700;
 }
 
-.back-btn{
+.back-btn {
     background-color: white;
 }
 
-.back-btn:hover{
+.back-btn:hover {
     background-color: hsl(228, 100%, 84%);
 }
 
 
-.step{
+.step {
     width: 100%;
 }
 
 /* Typeography */
 
-.form-count, h2{
+.form-count,
+h2 {
     font-size: 13px;
     font-weight: 400;
     text-transform: uppercase;
     color: hsl(231, 11%, 63%);
 }
 
-.count-container p{
+.count-container p {
     color: hsl(231, 100%, 99%);
     font-size: 15px;
     font-weight: 200;
     text-transform: uppercase;
 }
 
-.circle{
+.circle {
     border: solid white 1px;
     border-radius: 3rem;
     padding: 10px;
     width: 25px;
 }
 
-.number{
+.number {
     font-weight: 700;
     text-align: center;
     color: white;
     font-size: 15px;
+}
+
+.complete-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    margin:  125px auto;
+    gap: 1em;
+}
+
+.complete-container h2{
+    font-size: 30px;
+    color: black;
+}
+
+.complete-container p {
+    text-align: center;
+    line-height: 25px;
+    color: grey;
 }

@@ -4,6 +4,7 @@ import StepOne from "./components/stepone";
 import StepTwo from "./components/steptwo";
 import StepThree from "./components/stepthree";
 import StepFour from "./components/stepfour";
+import Completed from "./components/completed";
 import { useMultistepForm } from "./hooks/useMultistepForm";
 
 type FormData = {
@@ -39,22 +40,21 @@ function App() {
     });
   }
 
-  const FinalData = console.log(data)
+  const FinalData = console.log(data);
 
   const { steps, currentStepIndex, next, back } = useMultistepForm([
     <StepOne {...data} updateFields={updateFields} />,
     <StepTwo {...data} updateFields={updateFields} />,
     <StepThree {...data} updateFields={updateFields} />,
     <StepFour {...data} updateFields={updateFields} />,
+    <Completed />,
   ]);
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     next();
-    FinalData
+    FinalData;
   }
-
-  
 
   return (
     <div>
@@ -156,18 +156,18 @@ function App() {
         </div>
         <form onSubmit={onSubmit} className="step-container">
           {steps}
-          <div className="button-container">
-            {currentStepIndex !== 0 && (
-              <button type="button" onClick={back} className="back-btn">
-                Go Back
-              </button>
-            )}
-            {currentStepIndex !== 4 && (
+          {currentStepIndex <= 3 ? (
+            <div className="button-container">
+              {currentStepIndex !== 0 && (
+                <button type="button" onClick={back} className="back-btn">
+                  Go Back
+                </button>
+              )}
               <button type="submit" onSubmit={onSubmit} className="next-btn">
-                Next
+                {currentStepIndex === 3 ? "Confirm" : "Next"}
               </button>
-            )}
-          </div>
+            </div>
+          ) : null}
         </form>
       </div>
     </div>
