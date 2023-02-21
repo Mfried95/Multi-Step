@@ -70,7 +70,6 @@ const StepThree = ({ updateFields }: AddonsDataFormProps) => {
           <div
             className="choice custom"
             onClick={() => {
-
               setCustom(!custom);
               updateFields({ custom: custom ? 0 : 2 });
             }}

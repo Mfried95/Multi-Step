@@ -162,7 +162,7 @@ function App() {
                 Go Back
               </button>
             )}
-            {currentStepIndex !== 3 && (
+            {currentStepIndex !== 4 && (
               <button type="submit" onSubmit={onSubmit} className="next-btn">
                 Next
               </button>
