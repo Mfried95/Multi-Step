@@ -8,6 +8,7 @@
     <li>CSS</li>
   </ul>
   
+  <a href="https://main--peaceful-chaja-8ecdde.netlify.app/">Preview Application</a>
   <h2>Description</h2>
   <p>This is a multi-step form created with React. It allows users to input their personal information, select a gaming console and pick add-ons for their account. The form features form validation, dynamic button text changes based on the current step and a progress bar that indicates the user's progress through the form.</p>
   <p>The form is built using React functional components and uses React hooks to manage the state. It also incorporates local storage to remember the user's previous selections in case they leave the form and return later.</p>
