@@ -25,6 +25,8 @@ const steptwo = ({ plan, price, updateFields }: PlanDataFormProps) => {
           <p>You have the option of Monthly or Yearly billing.</p>
         </div>
 
+        
+
         <div className="plan-selection">
           <button
             type="button"
